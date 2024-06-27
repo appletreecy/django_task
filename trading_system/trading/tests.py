@@ -18,6 +18,7 @@ class TradingSystemTests(APITestCase):
 
     def test_place_trade(self):
         url = reverse('trade-list')
+        print(f"trade-list url is{url}")
         data = {
             'stock': self.stock.id,
             'quantity': 10,
@@ -38,5 +39,3 @@ class TradingSystemTests(APITestCase):
         response = self.client.get(url, {'stock_id': self.stock.id})
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(response.data['total_value'], 1500.00)
-
-# Create your tests here.

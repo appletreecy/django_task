@@ -1,0 +1,3 @@
+username,stock,quantity,trade_type
+test_user,TestStock,120,BUY
+test_user,TestStock,51,SELL

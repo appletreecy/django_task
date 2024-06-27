@@ -6,11 +6,12 @@ from .models import Stock, Trade
 
 @admin.register(Stock)
 class StockAdmin(admin.ModelAdmin):
-    list_display = ('name', 'price')
+    list_display = ('id', 'name', 'price')
 
 # Register the Trade model
 
 
 @admin.register(Trade)
 class TradeAdmin(admin.ModelAdmin):
-    list_display = ('user', 'stock', 'quantity', 'trade_type', 'timestamp')
+    list_display = ('id', 'user', 'stock', 'quantity',
+                    'trade_type', 'timestamp')
