@@ -8,14 +8,14 @@ curl -X POST http://127.0.0.1:8000/api/trades/ -H 'Content-Type: application/jso
 
 confirm the trade was placed on localhost:8000/admin/ (admin/password)
 
-end point to retrieve the total value invested in a single stock by a user:
+endpoint to retrieve the total value invested in a single stock by a user:
 curl -X GET "http://127.0.0.1:8000/api/trades/total_value/?stock_id=1" -u test_user:splunk3du
 
-3. How to run the djanto test
+3. How to run the Djanto test
 
 python manage.py test
 
-4. How to schudle the bulk trades:
+4. How to schedule the bulk trades:
 4.1 please the csv file under the directory
 trading_system/trading_system/bulk_trades.csv
 username,stock,quantity,trade_type
